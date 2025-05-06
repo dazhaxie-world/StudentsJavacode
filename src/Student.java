@@ -1,48 +1,32 @@
+import java.util.HashSet;
+import java.util.Set;
+
 public class Student {
     private String name;
-    private double score;
+    private double gradePoints;//绩点
+    private Score selfList;
 
-    public Student() {
-    }
-
-    public Student(String name, double score) {
+    public Student(String name) {
         this.name = name;
-        this.score = score;
-    }
+        selfList=new Score();
+    }//创建学生类
 
-    /**
-     * 获取
-     * @return name
-     */
     public String getName() {
         return name;
     }
 
-    /**
-     * 设置
-     * @param name
-     */
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * 获取
-     * @return score
-     */
-    public double getScore() {
-        return score;
+    public void setSelfList(Subject add){
+        selfList.setSubjectList(add);
     }
+    public Object getSubjectList() {
+        return selfList.getSubjectList();
+    }//得到学生成绩表
 
-    /**
-     * 设置
-     * @param score
-     */
-    public void setScore(double score) {
-        this.score = score;
-    }
-
-    public String toString() {
-        return "Student{name = " + name + ", score = " + score + "}";
-    }
+    public double getGradePoints(){
+        return selfList.getScore();
+    }//得到绩点
 }
