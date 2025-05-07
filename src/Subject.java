@@ -18,7 +18,6 @@ public class Subject {
         return name;
     }
 
-
     public double getScore() {
         return score;
     }

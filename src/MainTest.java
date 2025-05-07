@@ -5,6 +5,8 @@ public class MainTest {
         Subject english = new Subject("english",3);
         stu.setSelfList(math);
         stu.setSelfList(english);
+
+        math.setScore(90);
         System.out.println(stu.getGradePoints());
     }
 }
