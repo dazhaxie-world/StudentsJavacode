@@ -1,3 +1,5 @@
+package SystemProcess;
+
 public class Subject {
     private String name;    //学科姓名
     private double score=0;   //考试成绩

@@ -1,8 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3073f30b-3f5a-4f97-aafa-a52135436241" name="Changes" comment="first commit">
+    <list default="true" id="3073f30b-3f5a-4f97-aafa-a52135436241" name="Changes" comment="second commit">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/LoginHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/LoginView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/MainView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/extendBag/MainViewCellRender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/extendBag/MainViewTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/extendBag/MainViewTableModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/img/dog.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI/util/DimensionUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java/MainTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java/Score.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/java/Subject.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SystemProcess/MainTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SystemProcess/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SystemProcess/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Subject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SystemProcess/Subject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +47,33 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="jdk.selected.JAVA_MODULE" value="17" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/GUI" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaCode\code\src\GUI" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.LoginView">
+    <configuration name="LoginView" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="GUI.LoginView" />
+      <module name="java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="GUI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainTest" />
+      <option name="MAIN_CLASS_NAME" value="SystemProcess.MainTest" />
       <module name="java" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -45,7 +81,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MainTest" />
+        <item itemvalue="Application.LoginView" />
       </list>
     </recent_temporary>
   </component>
@@ -61,7 +97,12 @@
       <workItem from="1746525604062" duration="5931000" />
       <workItem from="1746611945235" duration="2502000" />
       <workItem from="1746625383637" duration="697000" />
-      <workItem from="1746626093538" duration="2770000" />
+      <workItem from="1746626093538" duration="2883000" />
+      <workItem from="1746862578797" duration="3074000" />
+      <workItem from="1747995221333" duration="10000" />
+      <workItem from="1748572266526" duration="151000" />
+      <workItem from="1749783107967" duration="7000" />
+      <workItem from="1749826721076" duration="791000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1746243125911</created>
@@ -77,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1746243155738</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="second commit">
+      <created>1746787839523</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746787839523</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,7 +145,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
