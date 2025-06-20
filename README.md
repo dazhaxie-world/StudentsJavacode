@@ -1,9 +1,3 @@
----
-title: Java实现学生成绩管理系统
-date: 2025-06-20 22:30:20
-tags:
-
----
 
 学生成绩管理系统项目介绍
 
@@ -789,11 +783,6 @@ public class RecognizePattenUtil {
 
 ### （4）修改添加错误进行提示、无数据显示NoFound
 
-![添加提示](../Java_blog/img/添加提示.png)
-
-![修改提示](../Java_blog/img/修改提示.png)
-
-![NoFound](../Java_blog/img/NoFound.png)
 
 # **四、项目优势**
 
