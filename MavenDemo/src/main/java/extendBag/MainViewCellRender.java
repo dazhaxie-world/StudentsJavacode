@@ -13,6 +13,7 @@ public class MainViewCellRender extends DefaultTableCellRenderer {
         }else {
             setBackground(Color.WHITE);
         }
+
         setHorizontalAlignment(DefaultTableCellRenderer.CENTER);
         return super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
     }

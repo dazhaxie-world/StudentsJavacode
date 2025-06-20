@@ -9,7 +9,7 @@ import java.util.Random;
 import java.util.Set;
 
 public class GenerateUti implements ActionListener {
-    private static int TOTAL = 100;  // 总数据量
+    private static int TOTAL = 10000;  // 总数据量
     private static Random RANDOM = new Random();
 
     public static void main(String[] args) throws SQLException {
@@ -18,7 +18,9 @@ public class GenerateUti implements ActionListener {
 
     public static void generateData() throws SQLException {
         Set<String> idSet = new HashSet<>();  // 保证学号唯一
-            for (int i = 0; i < TOTAL; i++) {
+        String sql="INSERT INTO students(学号,`name`,birthday_year,birthday_month,birthday_day,chinese,math,java,PE) VALUES (?,?,?,?,?,?,?,?,?)";
+        PreparedStatement preparedStatement = SqlUtil.getConnection().prepareStatement(sql);
+        for (int i = 0; i < TOTAL; i++) {
                 String studentId = generateUniqueId(idSet);  // 生成唯一学号
                 String name = generateRandomName();          // 生成随机姓名
                 int year=generateBirthday_year();
@@ -28,8 +30,6 @@ public class GenerateUti implements ActionListener {
                 int score2 = generateNormalScore(80, 8);
                 int score3 = generateNormalScore(80, 8);
                 int score4 = generateNormalScore(80, 8);
-                String sql="INSERT INTO students(学号,`name`,birthday_year,birthday_month,birthday_day,chinese,math,java,PE) VALUES (?,?,?,?,?,?,?,?,?)";
-                PreparedStatement preparedStatement = SqlUtil.getConnection().prepareStatement(sql);
                 preparedStatement.setString(1,studentId);
                 preparedStatement.setString(2,name);
                 preparedStatement.setString(3,year+"");
@@ -55,23 +55,40 @@ public class GenerateUti implements ActionListener {
         return id;
     }
 
+    public GenerateUti() {
+
+    }
+
     // 生成随机姓名（姓氏+性别+名字）
     private static String generateRandomName() {
-        String[] surnames = {"赵", "钱", "孙", "李", "周", "吴", "郑", "王", "冯", "陈","秦","董","丁","田","齐"};
+        String[] surnames = {"赵", "钱", "孙", "李", "周", "吴", "郑",
+                "王", "冯", "陈","秦","董","丁","田","齐","柳"};
         String gender = RANDOM.nextBoolean() ? "男" : "女";
+        //判断?如果正确:如果错误
+
         String name = surnames[RANDOM.nextInt(surnames.length)];
+        //区分男女生成名字
 
-        String[] maleNames = {"强", "伟", "杰", "涛", "磊", "超", "峰", "辉", "宇", "浩","子","国","骁","飞","宇","镇","文",""};
-        String[] femaleNames = {"芳", "丽", "娟", "敏", "静", "秀", "娜", "丽", "慧", "婷","秀","华",""};
+        String[] maleNames = {"强", "伟", "杰", "涛", "磊", "超", "勇", "田", "宗",
+                "浩","子","国","骁","飞","宇","镇","文","尚","佳","凯","振","昊",""};
+
+        String[] femaleNames = {"芳", "丽", "娟", "敏", "静", "秀",
+                "娜", "丽", "慧", "婷","秀","华",""};
 
         name += gender.equals("男")
                 ? maleNames[RANDOM.nextInt(maleNames.length)]
                 : femaleNames[RANDOM.nextInt(femaleNames.length)];
+        //生成两个字
+
         name += gender.equals("男")
                 ? maleNames[RANDOM.nextInt(maleNames.length)]
                 : femaleNames[RANDOM.nextInt(femaleNames.length)];
+        //生成三个字
+
+
         return name;
     }
+
 
     // 生成正态分布成绩（均值80，标准差8，范围60-100）
     private static int generateNormalScore(double mean, double stdDev) {
@@ -100,13 +117,16 @@ public class GenerateUti implements ActionListener {
             return RANDOM.nextInt(28)+1;
         }
     }
+
+
     @Override
     public void actionPerformed(ActionEvent e) {
         try {
             generateData();
-            System.out.println("123");
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
+
     }
+
 }

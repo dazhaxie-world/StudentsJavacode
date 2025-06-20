@@ -10,7 +10,7 @@ import java.sql.*;
 import java.util.Properties;
 
 public class SqlUtil {
-//
+
 //    static final String url="jdbc:mysql://localhost:3306/students_system";
 //    static final String username="root";
 //    static final String password="1234";
@@ -24,6 +24,13 @@ public class SqlUtil {
 //    }
     static Properties properties=new Properties();
     public static Connection getConnection(){
+//        try {
+//            return DriverManager.getConnection(url,username,password);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+
+
         try {
             properties.load(new FileInputStream("D:\\rubbish\\Java\\OppoJava\\MavenDemo\\src\\druid.properties"));
         } catch (IOException e) {
@@ -35,11 +42,6 @@ public class SqlUtil {
         } catch (Exception e) {
             e.printStackTrace();
         }
-//        try {
-//            return DriverManager.getConnection(url,username,password);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
         return null;
     }
     public static void closeConnection(Connection connection){

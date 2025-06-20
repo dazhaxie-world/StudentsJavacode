@@ -13,6 +13,7 @@ public class RecognizePattenUtil {
         String[] result;
         result = s.split(regex);
         return result;
+
     }
 
 }

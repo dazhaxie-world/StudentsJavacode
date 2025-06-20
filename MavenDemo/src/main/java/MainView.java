@@ -1,6 +1,7 @@
 import extendBag.MainViewTable;
 import extendBag.MainViewTableModel;
 import util.DimensionUtil;
+import util.PrintUtil;
 import util.SqlUtil;
 
 import javax.swing.*;
@@ -19,6 +20,7 @@ public class MainView extends JFrame{
     JButton deleteButton=new JButton("删除");
     JButton searchButton=new JButton("查询");
     JButton generateButton=new JButton("一键生成");
+    JButton writeButton=new JButton("导出学生成绩表");
     JButton outSystem=new JButton("退出系统");
     static JTextField searchText=new JTextField(15);
 
@@ -29,6 +31,7 @@ public class MainView extends JFrame{
     MainViewTable mainViewTable=new MainViewTable();
     StudentsUpDate studentsUpDate=new StudentsUpDate();
     GenerateUti generateUti=new GenerateUti();
+    PrintUtil printUtil=new PrintUtil();
     PageUtil pageUtil=new PageUtil();
     static MainView pubMainView=null;
     static int startPage=0;
@@ -136,12 +139,15 @@ public class MainView extends JFrame{
         deleteButton.addActionListener(studentsUpDate);
         searchButton.addActionListener(studentsUpDate);
         generateButton.addActionListener(generateUti);
+        writeButton.addActionListener(printUtil);
+
         northPanel.add(addButton);
         northPanel.add(updateButton);
         northPanel.add(deleteButton);
         northPanel.add(searchText);
         northPanel.add(searchButton);
         northPanel.add(generateButton);
+        northPanel.add(writeButton);
         contentPane.add(northPanel,BorderLayout.NORTH);
     }
     public void reload(){

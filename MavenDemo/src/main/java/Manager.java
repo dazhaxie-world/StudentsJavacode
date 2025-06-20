@@ -25,4 +25,8 @@ public class Manager {
         this.name = name;
         this.key = key;
     }
+
+    public Manager() {
+
+    }
 }

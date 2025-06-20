@@ -52,8 +52,9 @@ public class LoginView extends JFrame {
         setVisible(true);
 
 
-
         Container contentPane = getContentPane();
+
+
         //定义组件
         nameLabel.setFont(new Font("微软雅黑",Font.PLAIN,40));
         nameLabel.setPreferredSize(new Dimension(0,80));
@@ -65,6 +66,8 @@ public class LoginView extends JFrame {
         LoginButton.setFont(centerFont);
         resetButton.setFont(centerFont);
         //添加组件
+
+
         centerPanel.add(userName);
         centerPanel.add(nameInput);
         centerPanel.add(userPassword);
@@ -140,10 +143,14 @@ public class LoginView extends JFrame {
     }
 
     private void extracted() {
+
         //布局
 //        Spring childWidth = Spring.sum(Spring.sum(Spring.width(userName), Spring.width(nameInput)),Spring.constant(20));
 //        int offsetX = childWidth.getValue()/2;
 //        System.out.println(offsetX);
+
+
+
         springLayout.putConstraint(SpringLayout.EAST,userName,-100,SpringLayout.HORIZONTAL_CENTER,centerPanel);
         springLayout.putConstraint(SpringLayout.NORTH,userName,25,SpringLayout.NORTH,centerPanel);
         springLayout.putConstraint(SpringLayout.NORTH,nameInput,0,SpringLayout.NORTH,userName);
@@ -169,7 +176,4 @@ public class LoginView extends JFrame {
         springLayout.putConstraint(SpringLayout.EAST,resetButton,425,SpringLayout.WEST,centerPanel);
     }
 
-    public static void main(String[] args) {
-        new LoginView();
-    }
 }

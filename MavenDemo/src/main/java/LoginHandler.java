@@ -39,16 +39,18 @@ public class LoginHandler extends KeyAdapter implements ActionListener {
         String userStr = loginView.getNameInput().getText();
         String passwordStr = loginView.getPasswordInput().getText();
 //        System.out.println("输入账号"+userStr);
+
 //        System.out.println("输入密码"+passwordStr);
         boolean flag=false;
 //        boolean flag = passwordStr.equals(password)&&userStr.equals(username);
         for (Manager manager : managers) {
-            flag = manager.key.equals(passwordStr) && manager.getName().equals(userStr);
+            flag = manager.getKey().equals(passwordStr) && manager.getName().equals(userStr);
             if (flag) {
                 break;
             }
         }
 //        System.out.println(userStr+"   "+passwordStr);
+
 //        System.out.println(managers.get(0).name+"    "+managers.get(0).key);
         if(flag){
             System.out.println("登陆成功");
